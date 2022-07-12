@@ -47,7 +47,7 @@ def page_candidate(uid):
 @app.route("/skill/<skill>")
 def page_skill(skill):
     '''
-    Поиск кандидатов с навыком
+    Поиск кандидатов с необходимым навыком
     :param skill: Навык, который ищем
     :return: Список кандидатов
     '''
