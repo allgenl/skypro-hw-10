@@ -18,10 +18,6 @@ def page_index():
             all_candidates = (f"Имя кандидата: {candidates[i]['name']}\n")
             all_candidates += (f"Позиция кандидата: {candidates[i]['position']}\n")
             all_candidates += (f"Навыки: {candidates[i]['skills']}\n\n")
-        elif i == len(candidates) - 1:  # в самом конце убраны переносы строки
-            all_candidates += (f"Имя кандидата: {candidates[i]['name']}\n")
-            all_candidates += (f"Позиция кандидата: {candidates[i]['position']}\n")
-            all_candidates += (f"Навыки: {candidates[i]['skills']}")
         else:
             all_candidates += (f"Имя кандидата: {candidates[i]['name']}\n")
             all_candidates += (f"Позиция кандидата: {candidates[i]['position']}\n")
