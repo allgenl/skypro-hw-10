@@ -48,4 +48,23 @@ def page_candidate(uid):
         '''
 
 
+@app.route("/skill/<skill>")
+def page_skill(skill):
+    '''
+    Поиск кандидатов с навыком
+    :param skill: Навык, который ищем
+    :return: Список кандидатов
+    '''
+    candidates_with_skill = ""
+    for i in range(len(candidates)):
+        if skill.lower() in candidates[i]["skills"].lower():
+            candidates_with_skill += (f"Имя кандидата: {candidates[i]['name']}\n")
+            candidates_with_skill += (f"Позиция кандидата: {candidates[i]['position']}\n")
+            candidates_with_skill += (f"Навыки: {candidates[i]['skills']}\n\n")
+    if candidates_with_skill != "":
+        return f'''<pre>{candidates_with_skill}</pre>'''
+    else:
+        return "<pre>Кандидатов с таким навыком нет</pre>"
+
+
 app.run()
